@@ -73,9 +73,9 @@ jobs:
 
         uses: actions/checkout@v2
 
-      - name: Deployment
+      - name: SSH Remote Commands
 
-        uses: appleboy/ssh-action@main
+        uses: appleboy/ssh-action@v0.1.4
 
         with:
 
