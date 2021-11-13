@@ -73,22 +73,24 @@ jobs:
 
         uses: actions/checkout@v2
 
-      - name: SSH Remote Commands
+      - name: executing remote ssh commands using ssh key
 
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@master
 
         with:
 
           host: ${{ secrets.SSH_HOST }}
 
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-
           username: ${{ secrets.SSH_USERNAME }}
+
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
 
           script: |
 
             cd /var/www/html/
 
-            git checkout -f
+            git restore .
 
-            git pull
+            git checkout main
+
+            git pull origin main
