@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-       <h1>Hello World, This is testing Github Autodeploy with public key</h1>
+       <h1>Hello World, This is testing Github Autodeploy with private key after add pub key to authorize key</h1>
     </body>
 </html>
